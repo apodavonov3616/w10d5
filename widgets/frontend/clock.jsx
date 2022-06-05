@@ -30,14 +30,20 @@ export default class Clock extends React.Component {
         minutes = (minutes < 10) ? `0${minutes}` : minutes;
         seconds = (seconds < 10) ? `0${seconds}` : seconds;
 
-        return <div>
-            <h1>My clock</h1>
-            <div>
-                <h2>Time:</h2>
-                <div>
+        return <div className='clock'>
+            <h2>My clock</h2>
+            <p>
+                <span>Time:</span>
+                <span>
                     {hours}:{minutes}:{seconds}
-                </div>
-            </div>
+                </span>
+            </p>
+            <p>
+                <span>Date:</span>
+                <span>
+                    {this.state.time.toDateString()}
+                </span>
+            </p>
         </div>
     }
 }

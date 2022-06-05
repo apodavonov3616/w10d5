@@ -1,0 +1,11 @@
+.clock {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: darkcyan;
+    border: 3px solid black
+}
+
+.clock p {
+    display: flex;
+    justify-content: space-between;
+}
+
