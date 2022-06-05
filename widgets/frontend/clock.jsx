@@ -13,10 +13,18 @@ export default class Clock extends React.Component {
         this.setState({time: new Date()})
     }
 
+    componentDidMount() {
+        this.intervalId = setInterval(this.tick, 1000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.intervalId);
+    }
+
     render() {
         let hours = this.state.time.getHours();
         let minutes = this.state.time.getMinutes();
-        let seconds = this.state.seconds.getSeconds();
+        let seconds = this.state.time.getSeconds();
 
         hours = (hours < 10) ? `0${hours}` : hours;
         minutes = (minutes < 10) ? `0${minutes}` : minutes;
