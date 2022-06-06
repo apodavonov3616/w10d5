@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Clock from './clock';
 import Tabs from './tabs';
 import Weather from './weather';
+import Auto from './auto.jsx'
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			<Clock/>
 			<Tabs panes={panes}/>
 			<Weather/>
+			<Auto/>
 		</div>
 	}
 
