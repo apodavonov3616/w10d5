@@ -6,9 +6,9 @@ import Tabs from './tabs'
 document.addEventListener("DOMContentLoaded", () => {
 
 	const panes = [
-		{title: number1, content: 'number1 things'},
-		{title: number2, content: 'number2 things'},
-		{title: number3, content: 'number3 things'}
+		{title: 'number1', content: 'number1 things'},
+		{title: 'number2', content: 'number2 things'},
+		{title: 'number3', content: 'number3 things'}
 	]
 
 	function Root() {

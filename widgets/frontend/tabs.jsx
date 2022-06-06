@@ -10,7 +10,7 @@ class Headers extends React.Component {
             return (
                 <li key={index}
                     className = {klass}
-                    onClick={()=> this.props.onTabChose(index)}>
+                    onClick={() => this.props.onTabChosen(index)}>
                         {title}
                 </li>
             )
@@ -29,6 +29,7 @@ export default class Tabs extends React.Component {
         this.state = {
             selectedPane: 0
         };
+        this.selectTab = this.selectTab.bind(this);
     };
 
     selectTab(num) {
@@ -36,16 +37,22 @@ export default class Tabs extends React.Component {
     }
 
     render(){
+        let pane = this.props.panes[this.state.selectedPane]
+
         return <div>
             <h1>Tabs</h1>
             <div className='tabs'>
                 <Headers 
                 selectedPane = {this.state.selectedPane}
-                ontabChosen= {this.selectTab}
+                onTabChosen= {this.selectTab}
                 panes = {this.props.panes}>
                 </Headers>
+                <div className="tab-content">
+                <article>
+                    {pane.content}
+                </article>
+                </div>
             </div>
-            <div></div>
         </div>
     };
 
