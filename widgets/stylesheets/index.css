@@ -19,3 +19,8 @@
     justify-content: center;
 }
 
+.weather {
+    background-color:blue;
+    border: 3px solid black
+}
+
