@@ -9,3 +9,13 @@
     justify-content: space-between;
 }
 
+.tabs {
+    border: 3px solid black;
+    background-color: beige;
+}
+
+.tab-content {
+    display: flex;
+    justify-content: center;
+}
+
